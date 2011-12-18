@@ -3,14 +3,14 @@ Contributors: chipbennett
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QP3N9HUSYJPK6
 Tags: oenology, hooks
 Requires at least: 3.1
-Tested up to: 3.2
-Stable tag: 2.0
+Tested up to: 3.3
+Stable tag: 2.1
 
 Provides a UI for manipulating the custom hooks in the Oenology Theme
 
 == Description ==
 
-Provides a UI for manipulating the custom hooks in the Oenology Theme
+Provides a UI for manipulating the custom hooks in the Oenology Theme. Requires Oenology Theme version 2.0, and compatible up to version 2.5.
 
 == Installation ==
 
