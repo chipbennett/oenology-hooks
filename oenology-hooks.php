@@ -3,7 +3,7 @@
  * Plugin Name: Oenology Hooks
  * Plugin URI: http://www.chipbennett.net/wordpress/plugins/oenology-hooks/
  * Description: Provides a UI for manipulating the custom hooks in the Oenology Theme
- * Version: 2.0
+ * Version: 2.1
  * Author: chipbennett
  * Author URI: http://www.chipbennett.net/
  *
