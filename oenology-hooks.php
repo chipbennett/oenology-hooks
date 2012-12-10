@@ -3,7 +3,7 @@
  * Plugin Name: Oenology Hooks
  * Plugin URI: http://www.chipbennett.net/wordpress/plugins/oenology-hooks/
  * Description: Provides a UI for manipulating the custom hooks in the Oenology Theme
- * Version: 2.1
+ * Version: 2.2
  * Author: chipbennett
  * Author URI: http://www.chipbennett.net/
  *
@@ -57,7 +57,7 @@ function oenology_hooks_get_hooks() {
 		'site_header' => array(
 			'name' => 'site_header',
 			'title' => 'Site Header',
-			'description' => 'Replace the site header content.',
+			'description' => 'Filter the site header content.',
 			'type' => 'Filter',
 			'section' => 'header',
 			'tab' => 'headerfooter',
@@ -84,7 +84,7 @@ function oenology_hooks_get_hooks() {
 		'site_footer' => array(
 			'name' => 'site_footer',
 			'title' => 'Site Footer',
-			'description' => 'Replace the site footer content.',
+			'description' => 'Filter the site footer content.',
 			'type' => 'Filter',
 			'section' => 'footer',
 			'tab' => 'headerfooter',
@@ -129,7 +129,7 @@ function oenology_hooks_get_hooks() {
 		'loop_footer' => array(
 			'name' => 'loop_footer',
 			'title' => 'Loop Footer',
-			'description' => 'Replace the loop footer content.',
+			'description' => 'Filter the loop footer content.',
 			'type' => 'Filter',
 			'section' => 'loop_footer',
 			'tab' => 'loop',
@@ -174,7 +174,7 @@ function oenology_hooks_get_hooks() {
 		'post_header_date' => array(
 			'name' => 'post_header_date',
 			'title' => 'Post Header Date',
-			'description' => 'Replace the post header date content.',
+			'description' => 'Filter the post header date content.',
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -183,7 +183,7 @@ function oenology_hooks_get_hooks() {
 		'post_header_title' => array(
 			'name' => 'post_header_title',
 			'title' => 'Post Header Title',
-			'description' => 'Replace the post header title content.',
+			'description' => 'Filter the post header title content.',
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -192,7 +192,7 @@ function oenology_hooks_get_hooks() {
 		'post_header_thumbnail' => array(
 			'name' => 'post_header_thumbnail',
 			'title' => 'Post Header Thumbnail',
-			'description' => 'Replace the post header thumbnail content.',
+			'description' => 'Filter the post header thumbnail content.',
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -201,7 +201,7 @@ function oenology_hooks_get_hooks() {
 		'post_header_metadata' => array(
 			'name' => 'post_header_metadata',
 			'title' => 'Post Header Metadata',
-			'description' => 'Replace the post header metadata content.',
+			'description' => 'Filter the post header metadata content.',
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -210,7 +210,7 @@ function oenology_hooks_get_hooks() {
 		'post_header_taxonomies' => array(
 			'name' => 'post_header_taxonomies',
 			'title' => 'Post Header Taxonomies',
-			'description' => 'Replace the post header taxonomies content.',
+			'description' => 'Filter the post header taxonomies content.',
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -237,7 +237,7 @@ function oenology_hooks_get_hooks() {
 		'post_404' => array(
 			'name' => 'post_404',
 			'title' => 'Post 404',
-			'description' => 'Replace the Error 404 page content.',
+			'description' => 'Filter the Error 404 page content.',
 			'type' => 'Filter',
 			'section' => 'post_entry',
 			'tab' => 'post',
@@ -264,7 +264,7 @@ function oenology_hooks_get_hooks() {
 		'post_footer_avatar' => array(
 			'name' => 'post_footer_avatar',
 			'title' => 'Post Footer Avatar',
-			'description' => 'Replace the post footer avatar content.',
+			'description' => 'Filter the post footer avatar content.',
 			'type' => 'Filter',
 			'section' => 'post_footer',
 			'tab' => 'post',
@@ -273,7 +273,7 @@ function oenology_hooks_get_hooks() {
 		'post_footer_metadata' => array(
 			'name' => 'post_footer_metadata',
 			'title' => 'Post Footer Metadata',
-			'description' => 'Replace the post footer metadata content.',
+			'description' => 'Filter the post footer metadata content.',
 			'type' => 'Filter',
 			'section' => 'post_footer',
 			'tab' => 'post',
@@ -359,6 +359,8 @@ function oenology_hooks_init() {
 		if ( 'Filter' == $hook['type'] ) {
 			$hookhide = $hookname . '_hide';
 			$defaults[$hookhide] = false;
+			$filtermethod = $hookname . '_filter_method';
+			$defaults[$filtermethod] = 'replace';
 		}
 	}
 	if ( false === $settings ) {
@@ -584,7 +586,7 @@ function oenology_hooks_register_settings(){
  * Hook the Oenology Hooks Plugin Settings Registration
  * into the 'admin_init' action hook.
  */
-add_action('admin_init', 'oenology_hooks_register_settings');
+add_action( 'admin_init', 'oenology_hooks_register_settings' );
 
 /**
  * Apply Global User Hook Settings
@@ -593,31 +595,47 @@ add_action('admin_init', 'oenology_hooks_register_settings');
  * custom Oenology Theme action and filter 
  * hooks.
  */
-global $oenology_hooks;
-$oenology_hooks = get_option( 'plugin_oenology_hooks_settings' );
-$allhooks = oenology_hooks_get_hooks();
-foreach ( $allhooks as $hook ) {
-	$hookname = $hook['name'];
-	$hooktype = $hook['type'];
-	$action = false;
-	$filter = false;
-	if ( 'Filter' == $hooktype ) {
-		$filter = 'oenology_hook_' . $hookname;
-		$hookhide = $hookname . '_hide';
-		if ( true == $oenology_hooks[$hookhide] ) {
-			add_filter( $filter, '__return_false' );
-		} else if ( false != $oenology_hooks[$hookname] ) {
-			$output = $oenology_hooks[$hookname];
-			$callback = create_function( '$input', 'return '. var_export( $output, true ) . ';' );
-			add_filter( $filter, $callback );
-		} 
-	} else if ( 'Action' == $hooktype ) {
-		$action = 'oenology_hook_' . $hookname;
-		if ( false != $oenology_hooks[$hookname] ) {
-			$output = $oenology_hooks[$hookname];
-			$callback = create_function( '', 'echo'. var_export( $output, true ) .';' );
-			add_action( $action, $callback );
+function oenology_hooks_add_callbacks() {
+	global $oenology_hooks;
+	$oenology_hooks = get_option( 'plugin_oenology_hooks_settings' );
+	if ( false === $oenology_hooks ) {
+		return;
+	}
+	$allhooks = oenology_hooks_get_hooks();
+	foreach ( $allhooks as $hook ) {
+		$hookslug = $hook['name'];
+		if ( isset( $oenology_hooks[$hookslug] ) && false != $oenology_hooks[$hookslug] && '' != $oenology_hooks[$hookslug] ) {
+			$hookname = 'oenology_hook_' . $hookslug;
+			$hooktype = $hook['type'];
+			$callback = false;
+			/*
+			if ( 'Filter' == $hooktype ) {
+				$hookhide = $hookslug . '_hide';
+				if ( true == $oenology_hooks[$hookhide] ) {
+					$callback = '__return_false';
+				} else {
+					$filterslug = $hookslug . '_filter_method';
+					$filtermethod = ( isset( $oenology_hooks[$filterslug] ) ? $oenology_hooks[$filterslug] : false );
+					$output = $oenology_hooks[$hookslug];
+					if ( 'before' == $filtermethod ) {
+						add_filter( $hookname, create_function( '$input', 'return ' . $oenology_hooks[$filterslug] . ';' ) );
+					} else if ( 'after' == $filtermethod ) {
+						add_filter( $hookname, create_function( '$input', 'return ' . $oenology_hooks[$filterslug] . ';' ) );
+					} else if ( 'replace' == $filtermethod ) {
+						add_filter( $hookname, create_function( '$input', 'return ' . $oenology_hooks[$filterslug] . ';' ) );
+					} else {
+						return;
+					}
+				}
+			} else 
+			*/
+			if ( 'Action' == $hooktype ) {
+				$output = $oenology_hooks[$hookslug];
+				$callback = create_function( '', 'echo' . var_export( $output, true ) . ';' );
+				add_action( $hookname, $callback );
+			}
 		}
 	}
 }
+add_action( 'init', 'oenology_hooks_add_callbacks' );
 ?>

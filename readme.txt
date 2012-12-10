@@ -3,14 +3,14 @@ Contributors: chipbennett
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QP3N9HUSYJPK6
 Tags: oenology, hooks
 Requires at least: 3.1
-Tested up to: 3.3
-Stable tag: 2.1
+Tested up to: 3.5
+Stable tag: 2.2
 
 Provides a UI for manipulating the custom hooks in the Oenology Theme
 
 == Description ==
 
-Provides a UI for manipulating the custom hooks in the Oenology Theme. Requires Oenology Theme version 2.0, and compatible up to version 2.5.
+Provides a UI for manipulating the custom hooks in the Oenology Theme. Requires Oenology Theme version 2.0, and compatible up to version 3.0.
 
 == Installation ==
 
@@ -43,11 +43,17 @@ Activiation and Use
 
 == Changelog ==
 
+= 2.2 =
+* Ready for WordPress 3.5
+* Temporarily disabled filter hooks, until I can find a better implementation
+
 = 2.0 =
 * Initial release, coincides with Oenology Theme version 2.0
 
 
 == Upgrade Notice ==
 
+= 2.2 =
+Ready for WordPress 3.5. Temporarily disabled filter hooks, until I can find a better implementation.
 = 2.0 =
 Initial Release. Coincides with Oenology Theme version 2.0
