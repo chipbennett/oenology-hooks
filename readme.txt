@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: oenology, hooks
 Requires at least: 3.1
 Tested up to: 3.5
-Stable tag: 2.2
+Stable tag: 2.3
 
 Provides a UI for manipulating the custom hooks in the Oenology Theme
 
@@ -43,6 +43,8 @@ Activiation and Use
 
 == Changelog ==
 
+= 2.3 =
+* Made Plugin translation-ready
 = 2.2 =
 * Ready for WordPress 3.5
 * Temporarily disabled filter hooks, until I can find a better implementation
@@ -53,6 +55,8 @@ Activiation and Use
 
 == Upgrade Notice ==
 
+= 2.3 =
+Made Plugin translation-ready
 = 2.2 =
 Ready for WordPress 3.5. Temporarily disabled filter hooks, until I can find a better implementation.
 = 2.0 =

@@ -1,0 +1,588 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Oenology Hooks\n"
+"POT-Creation-Date: 2012-12-20 13:09-0500\n"
+"PO-Revision-Date: 2012-12-20 13:09-0500\n"
+"Last-Translator: Chip Bennett <chip@chipbennett.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\Documents and Settings\\wbennett\\My Documents"
+"\\Dev\\GitHub\\oenology-hooks\n"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:41
+msgid "Extent Before"
+msgstr "Extent Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:42
+msgid "Output content before all site content."
+msgstr "Output content before all site content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:50
+msgid "Extent After"
+msgstr "Extent After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:51
+msgid "Output content after all site content."
+msgstr "Output content after all site content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:59
+msgid "Site Header Before"
+msgstr "Site Header Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:60
+msgid "Output content before the site header."
+msgstr "Output content before the site header."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:68
+msgid "Site Header"
+msgstr "Site Header"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:69
+msgid "Filter the site header content."
+msgstr "Filter the site header content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:77
+msgid "Site Header After"
+msgstr "Site Header After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:78
+msgid "Output content after the site header content."
+msgstr "Output content after the site header content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:86
+msgid "Site Footer Before"
+msgstr "Site Footer Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:87
+msgid "Output content before the site footer content."
+msgstr "Output content before the site footer content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:95
+msgid "Site Footer"
+msgstr "Site Footer"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:96
+msgid "Filter the site footer content."
+msgstr "Filter the site footer content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:104
+msgid "Site Footer After"
+msgstr "Site Footer After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:105
+msgid "Output content after the site footer content."
+msgstr "Output content after the site footer content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:113
+msgid "Loop Header Before"
+msgstr "Loop Header Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:114
+msgid "Output content before the loop header content."
+msgstr "Output content before the loop header content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:122
+msgid "Loop Header After"
+msgstr "Loop Header After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:123
+msgid "Output content after the loop header content."
+msgstr "Output content after the loop header content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:131
+msgid "Loop Footer Before"
+msgstr "Loop Footer Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:132
+msgid "Output content before the loop footer content."
+msgstr "Output content before the loop footer content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:140
+msgid "Loop Footer"
+msgstr "Loop Footer"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:141
+msgid "Filter the loop footer content."
+msgstr "Filter the loop footer content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:149
+msgid "Loop Footer After"
+msgstr "Loop Footer After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:150
+msgid "Output content after the loop footer content."
+msgstr "Output content after the loop footer content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:158
+msgid "Post Before"
+msgstr "Post Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:159
+msgid "Output content before the post content."
+msgstr "Output content before the post content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:167
+msgid "Post After"
+msgstr "Post After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:168
+msgid "Output content after the post content."
+msgstr "Output content after the post content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:176
+msgid "Post Header Before"
+msgstr "Post Header Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:177
+msgid "Output content before the post header content."
+msgstr "Output content before the post header content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:185
+msgid "Post Header Date"
+msgstr "Post Header Date"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:186
+msgid "Filter the post header date content."
+msgstr "Filter the post header date content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:194
+msgid "Post Header Title"
+msgstr "Post Header Title"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:195
+msgid "Filter the post header title content."
+msgstr "Filter the post header title content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:203
+msgid "Post Header Thumbnail"
+msgstr "Post Header Thumbnail"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:204
+msgid "Filter the post header thumbnail content."
+msgstr "Filter the post header thumbnail content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:212
+msgid "Post Header Metadata"
+msgstr "Post Header Metadata"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:213
+msgid "Filter the post header metadata content."
+msgstr "Filter the post header metadata content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:221
+msgid "Post Header Taxonomies"
+msgstr "Post Header Taxonomies"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:222
+msgid "Filter the post header taxonomies content."
+msgstr "Filter the post header taxonomies content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:230
+msgid "Post Header After"
+msgstr "Post Header After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:231
+msgid "Output content after the post header content."
+msgstr "Output content after the post header content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:239
+msgid "Post Entry Before"
+msgstr "Post Entry Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:240
+msgid "Output content before the post entry content."
+msgstr "Output content before the post entry content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:248
+msgid "Post 404"
+msgstr "Post 404"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:249
+msgid "Filter the Error 404 page content."
+msgstr "Filter the Error 404 page content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:257
+msgid "Post Entry After"
+msgstr "Post Entry After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:258
+msgid "Output content after the post entry content."
+msgstr "Output content after the post entry content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:266
+msgid "Post Footer Before"
+msgstr "Post Footer Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:267
+msgid "Output content before the post footer content."
+msgstr "Output content before the post footer content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:275
+msgid "Post Footer Avatar"
+msgstr "Post Footer Avatar"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:276
+msgid "Filter the post footer avatar content."
+msgstr "Filter the post footer avatar content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:284
+msgid "Post Footer Metadata"
+msgstr "Post Footer Metadata"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:285
+msgid "Filter the post footer metadata content."
+msgstr "Filter the post footer metadata content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:293
+msgid "Post Footer License"
+msgstr "Post Footer License"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:294
+msgid "Add post footer license content."
+msgstr "Add post footer license content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:302
+msgid "Post Footer After"
+msgstr "Post Footer After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:303
+msgid "Output content after the post footer content."
+msgstr "Output content after the post footer content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:311
+msgid "Post Comments Before"
+msgstr "Post Comments Before"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:312
+msgid "Output content before the post comments content."
+msgstr "Output content before the post comments content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:320
+msgid "Post Comments After"
+msgstr "Post Comments After"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:321
+msgid "Output content after the post comments content."
+msgstr "Output content after the post comments content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:340
+msgid ""
+"The Oenology Hooks Plugin requires the Oenology Theme, and should only be "
+"run when the Oenology Theme is active. It is used to configure action and "
+"filter hooks specific to Oenology."
+msgstr ""
+"The Oenology Hooks Plugin requires the Oenology Theme, and should only be "
+"run when the Oenology Theme is active. It is used to configure action and "
+"filter hooks specific to Oenology."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:404
+msgid "Oenology Hooks"
+msgstr "Oenology Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:427
+msgid "Extent"
+msgstr "Extent"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:431
+msgid "Site Extent Hooks"
+msgstr "Site Extent Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:432
+msgid "These hooks output content before and after all of the site content."
+msgstr "These hooks output content before and after all of the site content."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:438
+msgid "Header/Footer"
+msgstr "Header/Footer"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:442
+msgid "Site Header Hooks"
+msgstr "Site Header Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:443
+msgid "These hooks output content in the Site Header."
+msgstr "These hooks output content in the Site Header."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:447
+msgid "Site Footer Hooks"
+msgstr "Site Footer Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:448
+msgid "These hooks output content in the Site Footer."
+msgstr "These hooks output content in the Site Footer."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:454
+msgid "Loop"
+msgstr "Loop"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:458
+msgid "Loop Header Hooks"
+msgstr "Loop Header Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:459
+msgid "These hooks output content in the Loop Header."
+msgstr "These hooks output content in the Loop Header."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:463
+msgid "Loop Footer Hooks"
+msgstr "Loop Footer Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:464
+msgid "These hooks output content in the Loop footer."
+msgstr "These hooks output content in the Loop footer."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:470
+msgid "Post"
+msgstr "Post"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:474
+msgid "Post Hooks"
+msgstr "Post Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:475
+msgid ""
+"These hooks output content before/after each Post. These are global "
+"settings. To modify settings for a specific post, see the post edit screen."
+msgstr ""
+"These hooks output content before/after each Post. These are global "
+"settings. To modify settings for a specific post, see the post edit screen."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:479
+msgid "Post Header Hooks"
+msgstr "Post Header Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:480
+msgid "These hooks output content in the header of each Post."
+msgstr "These hooks output content in the header of each Post."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:484
+msgid "Post Entry Hooks"
+msgstr "Post Entry Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:485
+msgid "These hooks output content in each Post entry."
+msgstr "These hooks output content in each Post entry."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:489
+msgid "Post Footer Hooks"
+msgstr "Post Footer Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:490
+msgid "These hooks output content in the footer of each Post."
+msgstr "These hooks output content in the footer of each Post."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:494
+msgid "Post Comments Hooks"
+msgstr "Post Comments Hooks"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:495
+msgid "These hooks output content in the comments section of each Post."
+msgstr "These hooks output content in the comments section of each Post."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:558
+msgid "Hooks settings updated successfully."
+msgstr "Hooks settings updated successfully."
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:566
+msgid "Save Settings"
+msgstr "Save Settings"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/oenology-hooks.php:567
+msgid "Reset Defaults"
+msgstr "Reset Defaults"
+
+#: C:\Documents and Settings\wbennett\My
+#: Documents\Dev\GitHub\oenology-hooks/settings.php:225
+msgid "Hook"
+msgstr "Hook"
+
+#~ msgid "Donate"
+#~ msgstr "Donate"
+
+#~ msgid "Order"
+#~ msgstr "Order"
+
+#~ msgid "Order By"
+#~ msgstr "Order By"
+
+#~ msgid "Search Index Page"
+#~ msgstr "Search Index Page"
+
+#~ msgid "Set query options for the Search index page."
+#~ msgstr "Set query options for the Search index page."
+
+#~ msgid "Blog Posts Index Page"
+#~ msgstr "Blog Posts Index Page"
+
+#~ msgid "Set query options for the Blog Posts Index page."
+#~ msgstr "Set query options for the Blog Posts Index page."
+
+#~ msgid "Category Archive Index Page"
+#~ msgstr "Category Archive Index Page"
+
+#~ msgid "Set query options for the Category archive index page."
+#~ msgstr "Set query options for the Category archive index page."
+
+#~ msgid "Tag Archive Index Page"
+#~ msgstr "Tag Archive Index Page"
+
+#~ msgid "Set query options for the Tag archive index page."
+#~ msgstr "Set query options for the Tag archive index page."
+
+#~ msgid "Taxonomy Archive Index Page"
+#~ msgstr "Taxonomy Archive Index Page"
+
+#~ msgid "Set query options for the Taxonomy archive index page."
+#~ msgstr "Set query options for the Taxonomy archive index page."
+
+#~ msgid "Author Archive Index Page"
+#~ msgstr "Author Archive Index Page"
+
+#~ msgid "Set query options for the Author archive index page."
+#~ msgstr "Set query options for the Author archive index page."
+
+#~ msgid "Date Archive Index Page"
+#~ msgstr "Date Archive Index Page"
+
+#~ msgid "Set query options for the Date archive index page."
+#~ msgstr "Set query options for the Date archive index page."
+
+#~ msgid "Archive Index Page"
+#~ msgstr "Archive Index Page"
+
+#~ msgid "Set query options for the default Archive index page."
+#~ msgstr "Set query options for the default Archive index page."
+
+#~ msgid "None"
+#~ msgstr "None"
+
+#~ msgid "Post Slug"
+#~ msgstr "Post Slug"
+
+#~ msgid "Post Published Date"
+#~ msgstr "Post Published Date"
+
+#~ msgid "Random"
+#~ msgstr "Random"
+
+#~ msgid "Ascending"
+#~ msgstr "Ascending"
+
+#~ msgid "Descending"
+#~ msgstr "Descending"
+
+#~ msgid "Favicon"
+#~ msgstr "Favicon"
+
+#~ msgid "Upload an image to use as the site Favicon."
+#~ msgstr "Upload an image to use as the site Favicon."
+
+#~ msgid "Favicon file type must be one of ICO, PNG, JPEG, or GIF."
+#~ msgstr "Favicon file type must be one of ICO, PNG, JPEG, or GIF."
+
+#~ msgid "Use supported images only."
+#~ msgstr "Use supported images only."
+
+#~ msgid "Image will be used as-is."
+#~ msgstr "Image will be used as-is."
+
+#~ msgid "cbnet Favicon Options"
+#~ msgstr "cbnet Favicon Options"

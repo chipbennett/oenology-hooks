@@ -3,7 +3,7 @@
  * Plugin Name: Oenology Hooks
  * Plugin URI: http://www.chipbennett.net/wordpress/plugins/oenology-hooks/
  * Description: Provides a UI for manipulating the custom hooks in the Oenology Theme
- * Version: 2.2
+ * Version: 2.3
  * Author: chipbennett
  * Author URI: http://www.chipbennett.net/
  *
@@ -23,14 +23,23 @@
  */
  
 /**
+ * Load Plugin textdomain
+ */
+function oenology_hooks_load_textdomain() {
+	load_plugin_textdomain( 'oenology-hooks', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
+}
+// Load Plugin textdomain
+add_action( 'plugins_loaded', 'oenology_hooks_load_textdomain' );
+ 
+/**
  * Retrieve all hooks in the Oenology Theme
  */
 function oenology_hooks_get_hooks() {
 	$hooks = array(
 		'extent_before' => array(
 			'name' => 'extent_before',
-			'title' => 'Extent Before',
-			'description' => 'Output content before all site content.',
+			'title' => __( 'Extent Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before all site content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'extent',
 			'tab' => 'extent',
@@ -38,8 +47,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'extent_after' => array(
 			'name' => 'extent_after',
-			'title' => 'Extent After',
-			'description' => 'Output content after all site content.',
+			'title' => __( 'Extent After', 'oenology-hooks' ),
+			'description' => __( 'Output content after all site content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'extent',
 			'tab' => 'extent',
@@ -47,8 +56,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'site_header_before' => array(
 			'name' => 'site_header_before',
-			'title' => 'Site Header Before',
-			'description' => 'Output content before the site header.',
+			'title' => __( 'Site Header Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the site header.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'header',
 			'tab' => 'headerfooter',
@@ -56,8 +65,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'site_header' => array(
 			'name' => 'site_header',
-			'title' => 'Site Header',
-			'description' => 'Filter the site header content.',
+			'title' => __( 'Site Header', 'oenology-hooks' ),
+			'description' => __( 'Filter the site header content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'header',
 			'tab' => 'headerfooter',
@@ -65,8 +74,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'site_header_after' => array(
 			'name' => 'site_header_after',
-			'title' => 'Site Header After',
-			'description' => 'Output content after the site header content.',
+			'title' => __( 'Site Header After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the site header content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'header',
 			'tab' => 'headerfooter',
@@ -74,8 +83,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'site_footer_before' => array(
 			'name' => 'site_footer_before',
-			'title' => 'Site Footer Before',
-			'description' => 'Output content before the site footer content.',
+			'title' => __( 'Site Footer Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the site footer content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'footer',
 			'tab' => 'headerfooter',
@@ -83,8 +92,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'site_footer' => array(
 			'name' => 'site_footer',
-			'title' => 'Site Footer',
-			'description' => 'Filter the site footer content.',
+			'title' => __( 'Site Footer', 'oenology-hooks' ),
+			'description' => __( 'Filter the site footer content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'footer',
 			'tab' => 'headerfooter',
@@ -92,8 +101,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'site_footer_after' => array(
 			'name' => 'site_footer_after',
-			'title' => 'Site Footer After',
-			'description' => 'Output content after the site footer content.',
+			'title' => __( 'Site Footer After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the site footer content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'footer',
 			'tab' => 'headerfooter',
@@ -101,8 +110,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'loop_header_before' => array(
 			'name' => 'loop_header_before',
-			'title' => 'Loop Header Before',
-			'description' => 'Output content before the loop header content.',
+			'title' => __( 'Loop Header Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the loop header content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'loop_header',
 			'tab' => 'loop',
@@ -110,8 +119,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'loop_header_after' => array(
 			'name' => 'loop_header_after',
-			'title' => 'Loop Header After',
-			'description' => 'Output content after the loop header content.',
+			'title' => __( 'Loop Header After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the loop header content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'loop_header',
 			'tab' => 'loop',
@@ -119,8 +128,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'loop_footer_before' => array(
 			'name' => 'loop_footer_before',
-			'title' => 'Loop Footer Before',
-			'description' => 'Output content before the loop footer content.',
+			'title' => __( 'Loop Footer Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the loop footer content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'loop_footer',
 			'tab' => 'loop',
@@ -128,8 +137,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'loop_footer' => array(
 			'name' => 'loop_footer',
-			'title' => 'Loop Footer',
-			'description' => 'Filter the loop footer content.',
+			'title' => __( 'Loop Footer', 'oenology-hooks' ),
+			'description' => __( 'Filter the loop footer content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'loop_footer',
 			'tab' => 'loop',
@@ -137,8 +146,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'loop_footer_after' => array(
 			'name' => 'loop_footer_after',
-			'title' => 'Loop Footer After',
-			'description' => 'Output content after the loop footer content.',
+			'title' => __( 'Loop Footer After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the loop footer content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'loop_footer',
 			'tab' => 'loop',
@@ -146,8 +155,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_before' => array(
 			'name' => 'post_before',
-			'title' => 'Post Before',
-			'description' => 'Output content before the post content.',
+			'title' => __( 'Post Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the post content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post',
 			'tab' => 'post',
@@ -155,8 +164,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_after' => array(
 			'name' => 'post_after',
-			'title' => 'Post After',
-			'description' => 'Output content after the post content.',
+			'title' => __( 'Post After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the post content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post',
 			'tab' => 'post',
@@ -164,8 +173,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_header_before' => array(
 			'name' => 'post_header_before',
-			'title' => 'Post Header Before',
-			'description' => 'Output content before the post header content.',
+			'title' => __( 'Post Header Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the post header content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -173,8 +182,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_header_date' => array(
 			'name' => 'post_header_date',
-			'title' => 'Post Header Date',
-			'description' => 'Filter the post header date content.',
+			'title' => __( 'Post Header Date', 'oenology-hooks' ),
+			'description' => __( 'Filter the post header date content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -182,8 +191,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_header_title' => array(
 			'name' => 'post_header_title',
-			'title' => 'Post Header Title',
-			'description' => 'Filter the post header title content.',
+			'title' => __( 'Post Header Title', 'oenology-hooks' ),
+			'description' => __( 'Filter the post header title content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -191,8 +200,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_header_thumbnail' => array(
 			'name' => 'post_header_thumbnail',
-			'title' => 'Post Header Thumbnail',
-			'description' => 'Filter the post header thumbnail content.',
+			'title' => __( 'Post Header Thumbnail', 'oenology-hooks' ),
+			'description' => __( 'Filter the post header thumbnail content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -200,8 +209,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_header_metadata' => array(
 			'name' => 'post_header_metadata',
-			'title' => 'Post Header Metadata',
-			'description' => 'Filter the post header metadata content.',
+			'title' => __( 'Post Header Metadata', 'oenology-hooks' ),
+			'description' => __( 'Filter the post header metadata content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -209,8 +218,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_header_taxonomies' => array(
 			'name' => 'post_header_taxonomies',
-			'title' => 'Post Header Taxonomies',
-			'description' => 'Filter the post header taxonomies content.',
+			'title' => __( 'Post Header Taxonomies', 'oenology-hooks' ),
+			'description' => __( 'Filter the post header taxonomies content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -218,8 +227,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_header_after' => array(
 			'name' => 'post_header_after',
-			'title' => 'Post Header After',
-			'description' => 'Output content after the post header content.',
+			'title' => __( 'Post Header After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the post header content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post_header',
 			'tab' => 'post',
@@ -227,8 +236,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_entry_before' => array(
 			'name' => 'post_entry_before',
-			'title' => 'Post Entry Before',
-			'description' => 'Output content before the post entry content.',
+			'title' => __( 'Post Entry Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the post entry content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post_entry',
 			'tab' => 'post',
@@ -236,8 +245,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_404' => array(
 			'name' => 'post_404',
-			'title' => 'Post 404',
-			'description' => 'Filter the Error 404 page content.',
+			'title' => __( 'Post 404', 'oenology-hooks' ),
+			'description' => __( 'Filter the Error 404 page content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_entry',
 			'tab' => 'post',
@@ -245,8 +254,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_entry_after' => array(
 			'name' => 'post_entry_after',
-			'title' => 'Post Entry After',
-			'description' => 'Output content after the post entry content.',
+			'title' => __( 'Post Entry After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the post entry content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post_entry',
 			'tab' => 'post',
@@ -254,8 +263,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_footer_before' => array(
 			'name' => 'post_footer_before',
-			'title' => 'Post Footer Before',
-			'description' => 'Output content before the post footer content.',
+			'title' => __( 'Post Footer Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the post footer content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post_footer',
 			'tab' => 'post',
@@ -263,8 +272,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_footer_avatar' => array(
 			'name' => 'post_footer_avatar',
-			'title' => 'Post Footer Avatar',
-			'description' => 'Filter the post footer avatar content.',
+			'title' => __( 'Post Footer Avatar', 'oenology-hooks' ),
+			'description' => __( 'Filter the post footer avatar content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_footer',
 			'tab' => 'post',
@@ -272,8 +281,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_footer_metadata' => array(
 			'name' => 'post_footer_metadata',
-			'title' => 'Post Footer Metadata',
-			'description' => 'Filter the post footer metadata content.',
+			'title' => __( 'Post Footer Metadata', 'oenology-hooks' ),
+			'description' => __( 'Filter the post footer metadata content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_footer',
 			'tab' => 'post',
@@ -281,8 +290,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_footer_license' => array(
 			'name' => 'post_footer_license',
-			'title' => 'Post Footer License',
-			'description' => 'Add post footer license content.',
+			'title' => __( 'Post Footer License', 'oenology-hooks' ),
+			'description' => __( 'Add post footer license content.', 'oenology-hooks' ),
 			'type' => 'Filter',
 			'section' => 'post_footer',
 			'tab' => 'post',
@@ -290,8 +299,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_footer_after' => array(
 			'name' => 'post_footer_after',
-			'title' => 'Post Footer After',
-			'description' => 'Output content after the post footer content.',
+			'title' => __( 'Post Footer After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the post footer content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post_footer',
 			'tab' => 'post',
@@ -299,8 +308,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_comments_before' => array(
 			'name' => 'post_comments_before',
-			'title' => 'Post Comments Before',
-			'description' => 'Output content before the post comments content.',
+			'title' => __( 'Post Comments Before', 'oenology-hooks' ),
+			'description' => __( 'Output content before the post comments content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post_comments',
 			'tab' => 'post',
@@ -308,8 +317,8 @@ function oenology_hooks_get_hooks() {
 		),
 		'post_comments_after' => array(
 			'name' => 'post_comments_after',
-			'title' => 'Post Comments After',
-			'description' => 'Output content after the post comments content.',
+			'title' => __( 'Post Comments After', 'oenology-hooks' ),
+			'description' => __( 'Output content after the post comments content.', 'oenology-hooks' ),
 			'type' => 'Action',
 			'section' => 'post_comments',
 			'tab' => 'post',
@@ -328,7 +337,7 @@ function oenology_hooks_check_template() {
 	$template = $temp[1];
 	if ( 'oenology' != $template ) {
 		wp_die( 
-			'The Oenology Hooks Plugin requires the Oenology Theme, and should only be run when the Oenology Theme is active. It is used to configure action and filter hooks specific to Oenology.',
+			__( 'The Oenology Hooks Plugin requires the Oenology Theme, and should only be run when the Oenology Theme is active. It is used to configure action and filter hooks specific to Oenology.', 'oenology-hooks' ),
 			'Oenology Hooks Plugin',
 			array( 'back_link' => true )
 		);
@@ -392,7 +401,7 @@ global $oenology_hooks_admin_hook;
  */
 function oenology_hooks_menu() {
 	global $oenology_hooks_admin_hook;
-	$oenology_hooks_admin_hook = add_theme_page( 'Oenology Hooks', 'Oenology Hooks', 'edit_theme_options', 'oenology-hooks', 'oenology_hooks_page');
+	$oenology_hooks_admin_hook = add_theme_page( __( 'Oenology Hooks', 'oenology_hooks' ), __( 'Oenology Hooks', 'oenology-hooks' ), 'edit_theme_options', 'oenology-hooks', 'oenology_hooks_page');
 }
 /**
  * Hook the Oenology Hooks page into 'admin_menu'
@@ -415,75 +424,75 @@ function oenology_hooks_get_settings_page_tabs() {
 	$tabs = array( 
         'extent' => array(
 			'name' => 'extent',
-			'title' => 'Extent',
+			'title' => __( 'Extent', 'oenology-hooks' ),
 			'sections' => array(
 				'extent' => array(
 					'name' => 'extent',
-					'title' => 'Site Extent Hooks',
-					'description' => 'These hooks output content before and after all of the site content.'
+					'title' => __( 'Site Extent Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content before and after all of the site content.', 'oenology-hooks' )
 				)
 			)
 		),
         'headerfooter' => array(
 			'name' => 'headerfooter',
-			'title' => 'Header/Footer',
+			'title' => __( 'Header/Footer', 'oenology-hooks' ),
 			'sections' => array(
 				'header' => array(
 					'name' => 'header',
-					'title' => 'Site Header Hooks',
-					'description' => 'These hooks output content in the Site Header.'
+					'title' => __( 'Site Header Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content in the Site Header.', 'oenology-hooks' )
 				),
 				'footer' => array(
 					'name' => 'footer',
-					'title' => 'Site Footer Hooks',
-					'description' => 'These hooks output content in the Site Footer.'
+					'title' => __( 'Site Footer Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content in the Site Footer.', 'oenology-hooks' )
 				)
 			)
 		),
 		'loop' => array(
 			'name' => 'loop',
-			'title' => 'Loop',
+			'title' => __( 'Loop', 'oenology-hooks' ),
 			'sections' => array(
 				'loop_header' => array(
 					'name' => 'loop_header',
-					'title' => 'Loop Header Hooks',
-					'description' => 'These hooks output content in the Loop Header.'
+					'title' => __( 'Loop Header Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content in the Loop Header.', 'oenology-hooks' )
 				),
 				'loop_footer' => array(
 					'name' => 'loop_footer',
-					'title' => 'Loop Footer Hooks',
-					'description' => 'These hooks output content in the Loop footer.'
+					'title' => __( 'Loop Footer Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content in the Loop footer.', 'oenology-hooks' )
 				)
 			)
 		),
 		'post' => array(
 			'name' => 'post',
-			'title' => 'Post',
+			'title' => __( 'Post', 'oenology-hooks' ),
 			'sections' => array(
 				'post' => array(
 					'name' => 'post',
-					'title' => 'Post Hooks',
-					'description' => 'These hooks output content before/after each Post. These are global settings. To modify settings for a specific post, see the post edit screen.'
+					'title' => __( 'Post Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content before/after each Post. These are global settings. To modify settings for a specific post, see the post edit screen.', 'oenology-hooks' )
 				),
 				'post_header' => array(
 					'name' => 'post_header',
-					'title' => 'Post Header Hooks',
-					'description' => 'These hooks output content in the header of each Post.'
+					'title' => __( 'Post Header Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content in the header of each Post.', 'oenology-hooks' )
 				),
 				'post_entry' => array(
 					'name' => 'post_entry',
-					'title' => 'Post Entry Hooks',
-					'description' => 'These hooks output content in each Post entry.'
+					'title' => __( 'Post Entry Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content in each Post entry.', 'oenology-hooks' )
 				),
 				'post_footer' => array(
 					'name' => 'post_footer',
-					'title' => 'Post Footer Hooks',
-					'description' => 'These hooks output content in the footer of each Post.'
+					'title' => __( 'Post Footer Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content in the footer of each Post.', 'oenology-hooks' )
 				),
 				'post_comments' => array(
 					'name' => 'post_comments',
-					'title' => 'Post Comments Hooks',
-					'description' => 'These hooks output content in the comments section of each Post.'
+					'title' => __( 'Post Comments Hooks', 'oenology-hooks' ),
+					'description' => __( 'These hooks output content in the comments section of each Post.', 'oenology-hooks' )
 				)
 			)
 		)
@@ -546,7 +555,7 @@ function oenology_hooks_page() {
 	<div class="wrap">
 		<?php oenology_hooks_settings_page_tabs(); ?>
 		<?php if ( isset( $_GET['settings-updated'] ) ) {
-    			echo "<div class='updated'><p>Hooks settings updated successfully.</p></div>";
+    			echo '<div class="updated"><p>' . __( 'Hooks settings updated successfully.', 'oenology-hooks' ) . '</p></div>';
 		} ?>
 	
 		<form action="options.php" method="post">
@@ -554,8 +563,8 @@ function oenology_hooks_page() {
 			settings_fields( 'plugin_oenology_hooks_settings' );
 			do_settings_sections( $settings_section );
 		?>
-			<input name="plugin_oenology_hooks_settings[submit-<?php echo $currenttab; ?>]" type="submit" class="button-primary" value="Save Settings" />
-			<input name="plugin_oenology_hooks_settings[reset-<?php echo $currenttab; ?>]" type="submit" class="button-secondary" value="Reset Defaults" />
+			<input name="plugin_oenology_hooks_settings[submit-<?php echo $currenttab; ?>]" type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'oenology-hooks' ); ?>" />
+			<input name="plugin_oenology_hooks_settings[reset-<?php echo $currenttab; ?>]" type="submit" class="button-secondary" value="<?php _e( 'Reset Defaults', 'oenology-hooks' ); ?>" />
 		</form>
 		
 	</div>

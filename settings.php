@@ -222,7 +222,7 @@ function oenology_hooks_setting_callback( $hook ) {
 	*/
 	if ( 'Action' == $type ) {
 	?>
-	<span class="description"><?php echo $hooktype; ?> Hook: <?php echo $hookdescription; ?></span><br />
+	<span class="description"><?php echo $hooktype; ?> <?php _e( 'Hook', 'oenology-hooks' ); ?>: <?php echo $hookdescription; ?></span><br />
 	<textarea name="<?php echo $textareaname; ?>" cols="80" rows="3" ><?php 
 		echo esc_textarea( $textareavalue ); 
 	?></textarea>	
